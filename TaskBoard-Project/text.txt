@@ -1,0 +1,29 @@
+
+
+      
+      const todoMovebtn = li.querySelector('.todo-move')
+      const todoBody = li
+      todoMovebtn.addEventListener('click', () => {
+       
+       if(todoArr.includes(todo.innerHTML.trim())){
+        alreadyExists.classList.add('show')
+        setTimeout(() => {
+          alreadyExists.classList.remove('show')
+        }, 2000)
+       }else{
+        todoBody.remove()
+        const li = document.createElement('li')
+        li.classList.add('in-progress')
+        li.innerHTML = ` <div class="in-progressBox" title="Click to see details">
+        <span class="todo">
+         ${todo.innerHTML.trim()}
+        </span>
+        <div class="inProgress">In Progress...</div>
+      </div>
+          `
+        todoArr.push(todo.innerHTML.trim())
+        
+          ulProgress.appendChild(li)
+       }
+      })
+      

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <!-- TASK HEADER -->
+  <header>
+    <div class="task-header">
+      <h1 class="logo">TASK BOARD</h1>
+      <div class="nav">
+        <a class="Board-navigation active">General</a>
+        <a class="Personal-navigation">Personal</a>
+        <a class="work-navigation">Work</a>
+      </div>
+    </div>
+  </header>
+  <!-- sticky header -->
+  <div class="sticky-header">
+    <h2 class="category-header">Task Board</h2>
+    <button class="addTodo-btn">
+      <i class='bx bx-plus'></i>
+      Add todo
+    </button>
+  </div>
+  <!-- TASK BOARD CONTAINER -->
+ 
+  <div class="container">
+    
+    <!-- TODO CONTAINER -->
+    <ul class="todo-container">
+      <h1>TASK</h1>
+       <div class="searchDiv">
+        <input type="text" class="search-todo" placeholder="Search tasks...">
+        <i class='bx bx-search-alt-2 search-todoIcon'></i>
+      </div>
+      <!-- <div class="searchDiv">
+        <input type="text" class="search-todo">
+        <i class='bx bx-search-alt-2 search-todoIcon'></i>
+      </div> -->
+    </ul>
+  
+  
+    <!-- PROGRESS CONTAINER -->
+    <ul class="progress-container">
+      <h1>DONE</h1>
+      <div class="done-description">
+        <h2 class="title-done" style="margin-bottom: 10px; margin-top: 0;">aew</h2>
+          <p class="status-done">Work</p>
+        <p class="date-done">Moved:22/03/2024</p>
+        <div>
+          <span class="des-done">
+          
+          </span>
+        </div>
+        <button class="close">Close</button>
+       </div>
+    </ul>
+  
+    <!-- DONE -->
+   
+    </div>
+  
+
+    <!-- TODO POPUP -->
+    <div class="popup">
+      <div class="popup-todo">
+        <div class="add-con">
+          <span style="padding-right: 0.2rem;">Add your title here</span>
+        <input class="todo-title" type="text" placeholder="Enter your title.." minlength="3" maxlength="20">
+        <span class="go-back">X</span>
+        </div>
+        <textarea placeholder="Enter your description here" class="todo-description"></textarea>
+         <button class="add-btn">Add</button>
+      </div>
+    </div>
+
+    <div class="already-exists">
+    <h2 style="color: red;">This todo title already exist in the todo column</h2>
+    <h3>Change your todo title</h3>
+    <i style="color: red;" class='bx bxs-error-alt'></i>
+    <div class="opt">
+      <button class="allow">Allow</button>
+      <button class="change">Change</button>
+    </div>
+    </div>
+
+    <div class="delete-popup">
+      <h2>Are you sure?.</h2>
+      <h3>You are about to delete this todo.</h3>
+     <div class="delete-option">
+       <span class="yes-del">Yes</span>
+        <span class="no-del">No</span>
+     </div>
+     </div>
+    <div class="blur-background">
+      
+    </div>
+
+    <div class="background-blur">
+
+    </div>
+
+    <div class="change-title">
+     <h2> Change Your title</h2> 
+     <input class="new-title" type="text" placeholder="Enter your new title" maxlength="20">
+      <div class="btnChan">
+        <button class="changeBtn">Done</button>
+        <button class="cancelBtn">Cancel</button>
+      </div>
+    </div>
+
+    <div class="choose-status">
+      <h1 style="display: block;">Choose category</h1>
+      <div class="status-div">
+        <button class="personal">Personal</button>
+        <button style="background: rgb(205, 65, 65);" class="work">Work</button>
+      </div>
+    </div>
+
+    <h1 class="empty-task">Empty</h1>
+    <h1 class="empty-done">Empty</h1>
+     <h1 class="no-result">No result found</h1>
+    <div class="move-popup">
+      <h2>Are you sure?</h2>
+       <h3>This action cannot be reversed</h3>
+       <div>
+        <button class="allow-move">Move</button>
+        <button class="cancel-move">Cancel</button>
+      </div>
+    </div>
+
+    
+    
+  <script src="script.js"></script>
+</body>
+</html>
